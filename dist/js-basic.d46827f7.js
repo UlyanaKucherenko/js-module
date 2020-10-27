@@ -183,14 +183,14 @@ alert(` В флешке на ${Gb} Гб поместиться -  ${fils} фай
 const money = Number(prompt("Введите количество денег: ", " "));
 const priceOneChocolate = Number(prompt("Введите сколько стоит одна шоколадка: ", " "));
 
-const nomberOfChocolates =((money/ priceOneChocolate)).toFixed(2);
-const balance = (money - (priceOneChocolate * nomberOfChocolates)).toFixed(2);
+const numberOfChocolates = Math.floor(money/ priceOneChocolate);
+const balance = (money - (priceOneChocolate * numberOfChocolates)).toFixed(2);
 
 
 console.log(` 
             Всего денег = ${money} грн
             1 шоколадка = ${priceOneChocolate} грн
-            Кол-во шоколадок, которые может купить = ${nomberOfChocolates} шт
+            Кол-во шоколадок, которые может купить = ${numberOfChocolates} шт
             Остаток на счету = ${balance} грн`
             ); 
 
