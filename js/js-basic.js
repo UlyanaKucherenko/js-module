@@ -1,9 +1,11 @@
 'use strict';
-//1
 
+
+//1
+/*
 const name = prompt('Введи своё имя :','');
 alert(`Привет, ${name} !`);
-
+*/
 //2
 /*
 const thisYear = 2020;
@@ -75,11 +77,11 @@ alert(`Остаток на счету = ${balance} грн`);
 
 //9
 /*
-const nomberUser = Number(prompt("Введите трёхзначное число: ", " "));
+const numberUser = Number(prompt("Введите трёхзначное число: ", " "));
 
-const first = Math.floor(nomberUser*0.01);
-const second = Math.floor(nomberUser*0.1) % 10;
-const third = nomberUser % 10;
+const first = Math.floor(numberUser*0.01);
+const second = Math.floor(numberUser*0.1) % 10;
+const third = numberUser % 10;
 
 const result = third * 100 + second * 10 + first;
 
@@ -88,7 +90,7 @@ alert(` ${result}`);
 
 //10
 
-// (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100.
+/* (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100. */
 /*
 const depositAmount = Number(prompt("Введите сумму вклада в банк: ", " "));
 const percentDepositYear = 5;
@@ -101,7 +103,7 @@ console.log(`
 Сумму вклада в банк = ${depositAmount}
 Процентная ставка депозита ${percentDepositYear}% годовых
 Кол-во дней в году = ${daysOfYear}
-кол-во дней вклада = ${daysOfTwoMonth} дней (12месяцев)
+кол-во дней вклада = ${daysOfTwoMonth} дней (2месяцa)
 Сумма начисленных процентов = ${sumInteresPercent} грн `);
 
 alert(`Сумма начисленных процентов = ${sumInteresPercent} грн`);
