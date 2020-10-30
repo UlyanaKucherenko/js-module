@@ -1,5 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #90d9f0;
+  min-height: 100vh;
+  font-size: 100%;
+}
+
+.container {
+  padding: 50px 15px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.homework {
+  background-color: #301B28;
+}
+.homework__title {
+  margin-bottom: 50px;
+  color: white;
+  font-size: 50px;
+}
+.homework__exercise-wrapper {
+  background-color: #DDC5A2;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+.homework__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.homework__item {
+  background-color: #523634;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  flex-wrap: wrap;
+  color: white;
+  text-transform: uppercase;
+}
+.homework__text {
+  margin-bottom: 20px;
+}
+.homework__btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.homework__button {
+  min-height: 45px;
+  max-width: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=/style.ff1c4cab.css.map */

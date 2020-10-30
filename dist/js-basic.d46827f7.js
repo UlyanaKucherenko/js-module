@@ -118,120 +118,120 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/js-basic.js":[function(require,module,exports) {
-'use strict'; //1
+'use strict';
 
-/*
-const name = prompt('Введи своё имя :','');
-alert(`Привет, ${name} !`);
-*/
-//2
+document.addEventListener('click', function (e) {
+  var target = e.target.id;
+  console.log(target);
 
-/*
-const thisYear = 2020;
+  switch (target) {
+    case 'hw1':
+      {
+        //1
+        var name = prompt('Введи своё имя :', '');
+        alert("\u041F\u0440\u0438\u0432\u0435\u0442, ".concat(name, " !"));
+        break;
+      }
 
-const yearBorn = Number(prompt("Введи год cвоего рождения: "," "));
-const yearsOld = thisYear - yearBorn;
-alert(`Тебе ${yearsOld} лет!`);
-*/
-//3
+    case 'hw2':
+      {
+        //2
+        var thisYear = 2020;
+        var yearBorn = Number(prompt("Введи год cвоего рождения: ", " "));
+        var yearsOld = thisYear - yearBorn;
+        alert("\u0422\u0435\u0431\u0435 ".concat(yearsOld, " \u043B\u0435\u0442!"));
+        break;
+      }
 
-/*
-const sideOfSquare = Number(prompt("Введите длину стороны квадрата(в см): а = ",""));
-const perimeterSquare = sideOfSquare * 4;
-alert(`Периметр квадрата равен ${perimeterSquare} см`);
-*/
-//4
+    case 'hw3':
+      {
+        //3
+        var sideOfSquare = Number(prompt("Введите длину стороны квадрата(в см): а = ", ""));
+        var perimeterSquare = sideOfSquare * 4;
+        alert("\u041F\u0435\u0440\u0438\u043C\u0435\u0442\u0440 \u043A\u0432\u0430\u0434\u0440\u0430\u0442\u0430 \u0440\u0430\u0432\u0435\u043D ".concat(perimeterSquare, " \u0441\u043C"));
+        break;
+      }
 
-/*
-const pi =3.14;
+    case 'hw4':
+      {
+        //4
+        var pi = 3.14;
+        var radius = Number(prompt("Введите радиус окружности : r = ", " "));
+        var areaOfCircle = pi * radius * radius;
+        alert("\u041F\u043B\u043E\u0449\u0430\u0434\u044C \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438 \u0440\u0430\u0432\u043D\u0430 ".concat(areaOfCircle, " "));
+        break;
+      }
 
-const radius = Number(prompt("Введите радиус окружности : r = "," "));
-const areaOfCircle = pi * radius * radius;
-alert(`Площадь окружности равна ${areaOfCircle} `);
-*/
-//5
+    case 'hw5':
+      {
+        //5
+        var distance = Number(prompt("Введите расстояние между городами (в км) : L = ", " "));
+        var time = Number(prompt("Введите время, за которое хотите добраться (в часах) : t = ", " "));
+        var speed = distance / time;
+        alert("\u041D\u0443\u0436\u043D\u0430\u044F \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0440\u0430\u0432\u043D\u0430 ".concat(speed, " \u043A\u043C/\u0447 "));
+        break;
+      }
 
-/*
-const distance = Number(prompt("Введите расстояние между городами (в км) : L = ", " "));
-const time = Number(prompt("Введите время, за которое хотите добраться (в часах) : t = "," "));
+    case 'hw6':
+      {
+        //6
+        var rate = 0.85;
+        var dollar = Number(prompt("Введите сумму в долларах : ", " "));
+        var euro = (dollar * rate).toFixed(2);
+        alert("".concat(dollar, " USD =  ").concat(euro, " EUR "));
+        break;
+      }
 
-const speed = distance / time;
-alert(`Нужная скорость равна ${speed} км/ч `);
-*/
-//6
+    case 'hw7':
+      {
+        //7
+        var fileSize = 820;
+        var Gb = Number(prompt("Введите количество ГБ в флешке: ", " "));
+        var fils = Math.floor(Gb * 1000 / fileSize);
+        alert(" \u0412 \u0444\u043B\u0435\u0448\u043A\u0435 \u043D\u0430 ".concat(Gb, " \u0413\u0431 \u043F\u043E\u043C\u0435\u0441\u0442\u0438\u0442\u044C\u0441\u044F -  ").concat(fils, " \u0444\u0430\u0439\u043B\u043E\u0432 \u0441 \u0440\u0430\u0437\u043C\u0435\u0440\u043E\u043C \u043F\u043E ").concat(fileSize, " \u041C\u0431"));
+        break;
+      }
 
-/*
-const rate= 0.85;
+    case 'hw8':
+      {
+        //8
+        var money = Number(prompt("Введите количество денег: ", " "));
+        var priceOneChocolate = Number(prompt("Введите сколько стоит одна шоколадка: ", " "));
+        var numberOfChocolates = Math.floor(money / priceOneChocolate);
+        var balance = (money - priceOneChocolate * numberOfChocolates).toFixed(2);
+        console.log(" \n                  \u0412\u0441\u0435\u0433\u043E \u0434\u0435\u043D\u0435\u0433 = ".concat(money, " \u0433\u0440\u043D\n                  1 \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0430 = ").concat(priceOneChocolate, " \u0433\u0440\u043D\n                  \u041A\u043E\u043B-\u0432\u043E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043E\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u043E\u0436\u0435\u0442 \u043A\u0443\u043F\u0438\u0442\u044C = ").concat(numberOfChocolates, " \u0448\u0442\n                  \u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0441\u0447\u0435\u0442\u0443 = ").concat(balance, " \u0433\u0440\u043D"));
+        alert("\u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0441\u0447\u0435\u0442\u0443 = ".concat(balance, " \u0433\u0440\u043D"));
+        break;
+      }
 
-const dollar = Number(prompt("Введите сумму в долларах : ", " "));
-const euro = (dollar * rate).toFixed(2);
+    case 'hw9':
+      {
+        //9
+        var numberUser = Number(prompt("Введите трёхзначное число: ", " "));
+        var first = Math.floor(numberUser * 0.01);
+        var second = Math.floor(numberUser * 0.1) % 10;
+        var third = numberUser % 10;
+        var result = third * 100 + second * 10 + first;
+        alert(" ".concat(result));
+        break;
+      }
 
-alert(`${dollar} USD =  ${ euro} EUR `);
-*/
-//7
+    case 'hw10':
+      {
+        //10
 
-/*
-const fileSize = 820;
-const Gb = Number(prompt("Введите количество ГБ в флешке: ", " "));
-const fils = Math.floor((Gb * 1000) / fileSize);
-
-alert(` В флешке на ${Gb} Гб поместиться -  ${fils} файлов с размером по ${fileSize} Мб`);
-*/
-//8
-
-/*
-const money = Number(prompt("Введите количество денег: ", " "));
-const priceOneChocolate = Number(prompt("Введите сколько стоит одна шоколадка: ", " "));
-
-const numberOfChocolates = Math.floor(money/ priceOneChocolate);
-const balance = (money - (priceOneChocolate * numberOfChocolates)).toFixed(2);
-
-
-console.log(` 
-            Всего денег = ${money} грн
-            1 шоколадка = ${priceOneChocolate} грн
-            Кол-во шоколадок, которые может купить = ${numberOfChocolates} шт
-            Остаток на счету = ${balance} грн`
-            ); 
-
-alert(`Остаток на счету = ${balance} грн`);
-
-*/
-//9
-
-/*
-const numberUser = Number(prompt("Введите трёхзначное число: ", " "));
-
-const first = Math.floor(numberUser*0.01);
-const second = Math.floor(numberUser*0.1) % 10;
-const third = numberUser % 10;
-
-const result = third * 100 + second * 10 + first;
-
-alert(` ${result}`);
-*/
-//10
-
-/* (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100. */
-
-/*
-const depositAmount = Number(prompt("Введите сумму вклада в банк: ", " "));
-const percentDepositYear = 5;
-const daysOfYear = 365;
-const daysOfTwoMonth = 61;
-
-const sumInteresPercent = ( (( depositAmount * percentDepositYear * daysOfTwoMonth ) / daysOfYear) / 100 ).toFixed(2);
-
-console.log(`
-Сумму вклада в банк = ${depositAmount}
-Процентная ставка депозита ${percentDepositYear}% годовых
-Кол-во дней в году = ${daysOfYear}
-кол-во дней вклада = ${daysOfTwoMonth} дней (2месяцa)
-Сумма начисленных процентов = ${sumInteresPercent} грн `);
-
-alert(`Сумма начисленных процентов = ${sumInteresPercent} грн`);
-
-*/
+        /* (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100. */
+        var depositAmount = Number(prompt("Введите сумму вклада в банк: ", " "));
+        var percentDepositYear = 5;
+        var daysOfYear = 365;
+        var daysOfTwoMonth = 61;
+        var sumInteresPercent = (depositAmount * percentDepositYear * daysOfTwoMonth / daysOfYear / 100).toFixed(2);
+        console.log("\n      \u0421\u0443\u043C\u043C\u0443 \u0432\u043A\u043B\u0430\u0434\u0430 \u0432 \u0431\u0430\u043D\u043A = ".concat(depositAmount, "\n      \u041F\u0440\u043E\u0446\u0435\u043D\u0442\u043D\u0430\u044F \u0441\u0442\u0430\u0432\u043A\u0430 \u0434\u0435\u043F\u043E\u0437\u0438\u0442\u0430 ").concat(percentDepositYear, "% \u0433\u043E\u0434\u043E\u0432\u044B\u0445\n      \u041A\u043E\u043B-\u0432\u043E \u0434\u043D\u0435\u0439 \u0432 \u0433\u043E\u0434\u0443 = ").concat(daysOfYear, "\n      \u043A\u043E\u043B-\u0432\u043E \u0434\u043D\u0435\u0439 \u0432\u043A\u043B\u0430\u0434\u0430 = ").concat(daysOfTwoMonth, " \u0434\u043D\u0435\u0439 (2\u043C\u0435\u0441\u044F\u0446a)\n      \u0421\u0443\u043C\u043C\u0430 \u043D\u0430\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043E\u0432 = ").concat(sumInteresPercent, " \u0433\u0440\u043D "));
+        alert("\u0421\u0443\u043C\u043C\u0430 \u043D\u0430\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043E\u0432 = ".concat(sumInteresPercent, " \u0433\u0440\u043D"));
+        break;
+      }
+  }
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -260,7 +260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64504" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58115" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
