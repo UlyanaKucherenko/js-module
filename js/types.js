@@ -1,14 +1,9 @@
 'use strict';
+/*Типы данных и операторы*/
 
-
-
-document.addEventListener('click', function(e) {
-    const target = e.target.id;
-    console.log(target);
-  
-    switch(target){
-      case'hw11': {
-        //1
+    //1
+    const hwTwoTaskOne = document.getElementById("hw2.1");
+    hwTwoTaskOne.addEventListener("click", function() {
         const age = Number(prompt("Введите сколько вам лет?"," "));
 
         if(age>0 && age<12) {
@@ -22,11 +17,12 @@ document.addEventListener('click', function(e) {
                         } else{
                             alert(`ошибка ввода`);
                         }
-        break;
-      }
+        
+    });
 
-      case'hw12': {
-        //2
+    //2
+    const hwTwoTaskTwo = document.getElementById("hw2.2");
+    hwTwoTaskTwo.addEventListener("click", function() {
         const numberUser = Number(prompt("Введите число от 0 до 9 :"," "));
 
         switch(numberUser){
@@ -85,11 +81,13 @@ document.addEventListener('click', function(e) {
             }
         }
 
-        break;
-      }
+    });
 
-      case'hw13': {
-        //3
+    
+    //3
+
+    const hwTwoTaskThree = document.getElementById("hw2.3");
+    hwTwoTaskThree.addEventListener("click", function() {
         const numberUser = Number(prompt("Введите трёхзначное число :"," "));
 
         const first = Math.floor(numberUser*0.01);
@@ -107,11 +105,12 @@ document.addEventListener('click', function(e) {
             }else {
                 alert(`Нет повторяющихся цифр!`)
                 }
-        break;
-      }
+    });
 
-      case'hw14': {
-        //4
+    
+    //4
+    const hwTwoTaskFour = document.getElementById("hw2.4");
+    hwTwoTaskFour.addEventListener("click", function() {
         const yearOfBirth = Number(prompt("Введите год своего рождения: ", " "));
 
         if(yearOfBirth % 400 === 0) {
@@ -121,11 +120,11 @@ document.addEventListener('click', function(e) {
         } else{
             alert(`${yearOfBirth} - НЕвысокосный год`);
         }
-        break;
-      }
+    });
 
-      case'hw15': {
-        //5
+    //5
+    const hwTwoTaskFive = document.getElementById("hw2.5");
+    hwTwoTaskFive.addEventListener("click", function() {
         const fivedigitNumber = Number(prompt("Введите пятиразрядное число: ", " "));
 
         const firstDigit = Math.floor(fivedigitNumber*0.0001);
@@ -140,11 +139,11 @@ document.addEventListener('click', function(e) {
                 alert(`${fivedigitNumber} - НЕ является палиндромом`);
             }
 
-        break;
-      }
+    });
 
-      case'hw16': {
-        //6
+    //6
+    const hwTwoTaskSix = document.getElementById("hw2.6");
+    hwTwoTaskSix.addEventListener("click", function() {
         const USD = Number(prompt('Введите сумму в USD :', " "));
         const EUR = 0.85;
         const UAN = 28.36;
@@ -156,19 +155,19 @@ document.addEventListener('click', function(e) {
         switch(selectCurrency) {
             case 1: {
                 result = USD * EUR;
-                alert(`${USD}USD = ${EUR}EUR`);
+                alert(`${USD}USD = ${result}EUR`);
                 break;
             }
         
             case 2: {
                 result = USD * UAN;
-                alert(`${USD}USD = ${UAN}UAN`);
+                alert(`${USD}USD = ${result}UAN`);
                 break;
             }
         
             case 3: {
                 result = USD * AZN;
-                alert(`${USD}USD = ${AZN}AZN`);
+                alert(`${USD}USD = ${result}AZN`);
                 break;
             }
         
@@ -179,11 +178,11 @@ document.addEventListener('click', function(e) {
         
         }
 
-        break;
-      }
+    });
 
-      case'hw17': {
-        //7
+    //7
+    const hwTwoTaskSeven = document.getElementById("hw2.7");
+    hwTwoTaskSeven.addEventListener("click", function() {
         const parchaseAmount = Number(prompt('Введите сумму покупки :', " "));
         let amountToPay = 0;
 
@@ -200,11 +199,11 @@ document.addEventListener('click', function(e) {
                         alert(`Сумма к оплате : ${parchaseAmount} грн`);
                     }
 
-        break;
-      }
+    });
 
-      case'hw18': {
-        //8
+    //8
+    const hwTwoTaskEight = document.getElementById("hw2.8");
+    hwTwoTaskEight.addEventListener("click", function() {
         const PI = 3.14;
         const circumference = Number(prompt('Введите длину окружности :', " "));
         const perimetrOfSquare = Number(prompt('Введите периметр квадрата :', " "));
@@ -219,11 +218,11 @@ document.addEventListener('click', function(e) {
            alert(` Окружность НЕ может поместиться в соответствующий квадрат`);
         }
 
-        break;
-      }
+    });
 
-      case'hw19': {
-        //9
+    //9
+    const hwTwoTaskNine = document.getElementById("hw2.9");
+    hwTwoTaskNine.addEventListener("click", function() {
         const firstQuestion = Number(prompt('Ответь на 3 вопроса првильно! ВОПРОС №1 Пандемия в 2020ом называется: 1-эбола 2-covid-19 3-поросячая', " "));
         const secondQuestion = Number(prompt('ВОПРОС №2 Главный герой фильма "Матрица"?: 1-Нео 2-Стэтэм 3-чел в очках', " "));
         const thirdQuestion = Number(prompt('ВОПРОС №3 Кто предатель в игре "Among Us" ? : 1-Зелёный 2-Голубой 3-Красный', " "));
@@ -242,12 +241,12 @@ document.addEventListener('click', function(e) {
         
         alert(` Ты набрал ${count} баллов`);
 
-        break;
-      }
+    });
 
-      case'hw20': {
-        //10
-
+    
+    //10
+    const hwTwoTaskTen = document.getElementById("hw2.10");
+    hwTwoTaskTen.addEventListener("click", function() {
         const year = Number(prompt(' Введите год:', " "));
         if( (year % 400 === 0) || ( (year % 4 === 0) && (year % 100 !== 0) )) {
             console.log(`высокосный год`);
@@ -292,11 +291,6 @@ document.addEventListener('click', function(e) {
             }
         }
 
-        break;
-      }
-
-
-    }
 });
               
 

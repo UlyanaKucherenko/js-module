@@ -119,118 +119,93 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/js-basic.js":[function(require,module,exports) {
 'use strict';
+/*Осныва JS*/
+//1
 
-document.addEventListener('click', function (e) {
-  var target = e.target.id;
-  console.log(target);
+var hwOneTaskOne = document.getElementById("hw1.1");
+hwOneTaskOne.addEventListener("click", function () {
+  var name = prompt('Введи своё имя :', '');
+  alert("\u041F\u0440\u0438\u0432\u0435\u0442, ".concat(name, " !"));
+}); //2 
 
-  switch (target) {
-    case 'hw1':
-      {
-        //1
-        var name = prompt('Введи своё имя :', '');
-        alert("\u041F\u0440\u0438\u0432\u0435\u0442, ".concat(name, " !"));
-        break;
-      }
+var hwOneTaskTwo = document.getElementById("hw1.2");
+hwOneTaskTwo.addEventListener("click", function () {
+  var thisYear = 2020;
+  var yearBorn = Number(prompt("Введи год cвоего рождения: ", " "));
+  var yearsOld = thisYear - yearBorn;
+  alert("\u0422\u0435\u0431\u0435 ".concat(yearsOld, " \u043B\u0435\u0442!"));
+}); //3
 
-    case 'hw2':
-      {
-        //2
-        var thisYear = 2020;
-        var yearBorn = Number(prompt("Введи год cвоего рождения: ", " "));
-        var yearsOld = thisYear - yearBorn;
-        alert("\u0422\u0435\u0431\u0435 ".concat(yearsOld, " \u043B\u0435\u0442!"));
-        break;
-      }
+var hwOneTaskThree = document.getElementById("hw1.3");
+hwOneTaskThree.addEventListener("click", function () {
+  var sideOfSquare = Number(prompt("Введите длину стороны квадрата(в см): а = ", ""));
+  var perimeterSquare = sideOfSquare * 4;
+  alert("\u041F\u0435\u0440\u0438\u043C\u0435\u0442\u0440 \u043A\u0432\u0430\u0434\u0440\u0430\u0442\u0430 \u0440\u0430\u0432\u0435\u043D ".concat(perimeterSquare, " \u0441\u043C"));
+}); //4
 
-    case 'hw3':
-      {
-        //3
-        var sideOfSquare = Number(prompt("Введите длину стороны квадрата(в см): а = ", ""));
-        var perimeterSquare = sideOfSquare * 4;
-        alert("\u041F\u0435\u0440\u0438\u043C\u0435\u0442\u0440 \u043A\u0432\u0430\u0434\u0440\u0430\u0442\u0430 \u0440\u0430\u0432\u0435\u043D ".concat(perimeterSquare, " \u0441\u043C"));
-        break;
-      }
+var hwOneTaskFour = document.getElementById("hw1.4");
+hwOneTaskFour.addEventListener("click", function () {
+  var pi = 3.14;
+  var radius = Number(prompt("Введите радиус окружности : r = ", " "));
+  var areaOfCircle = pi * radius * radius;
+  alert("\u041F\u043B\u043E\u0449\u0430\u0434\u044C \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438 \u0440\u0430\u0432\u043D\u0430 ".concat(areaOfCircle, " "));
+}); //5
 
-    case 'hw4':
-      {
-        //4
-        var pi = 3.14;
-        var radius = Number(prompt("Введите радиус окружности : r = ", " "));
-        var areaOfCircle = pi * radius * radius;
-        alert("\u041F\u043B\u043E\u0449\u0430\u0434\u044C \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438 \u0440\u0430\u0432\u043D\u0430 ".concat(areaOfCircle, " "));
-        break;
-      }
+var hwOneTaskFive = document.getElementById("hw1.5");
+hwOneTaskFive.addEventListener("click", function () {
+  var distance = Number(prompt("Введите расстояние между городами (в км) : L = ", " "));
+  var time = Number(prompt("Введите время, за которое хотите добраться (в часах) : t = ", " "));
+  var speed = distance / time;
+  alert("\u041D\u0443\u0436\u043D\u0430\u044F \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0440\u0430\u0432\u043D\u0430 ".concat(speed, " \u043A\u043C/\u0447 "));
+}); //6
 
-    case 'hw5':
-      {
-        //5
-        var distance = Number(prompt("Введите расстояние между городами (в км) : L = ", " "));
-        var time = Number(prompt("Введите время, за которое хотите добраться (в часах) : t = ", " "));
-        var speed = distance / time;
-        alert("\u041D\u0443\u0436\u043D\u0430\u044F \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0440\u0430\u0432\u043D\u0430 ".concat(speed, " \u043A\u043C/\u0447 "));
-        break;
-      }
+var hwOneTaskSix = document.getElementById("hw1.6");
+hwOneTaskSix.addEventListener("click", function () {
+  var rate = 0.85;
+  var dollar = Number(prompt("Введите сумму в долларах : ", " "));
+  var euro = (dollar * rate).toFixed(2);
+  alert("".concat(dollar, " USD =  ").concat(euro, " EUR "));
+}); //7
 
-    case 'hw6':
-      {
-        //6
-        var rate = 0.85;
-        var dollar = Number(prompt("Введите сумму в долларах : ", " "));
-        var euro = (dollar * rate).toFixed(2);
-        alert("".concat(dollar, " USD =  ").concat(euro, " EUR "));
-        break;
-      }
+var hwOneTaskSeven = document.getElementById("hw1.7");
+hwOneTaskSeven.addEventListener("click", function () {
+  var fileSize = 820;
+  var Gb = Number(prompt("Введите количество ГБ в флешке: ", " "));
+  var fils = Math.floor(Gb * 1000 / fileSize);
+  alert(" \u0412 \u0444\u043B\u0435\u0448\u043A\u0435 \u043D\u0430 ".concat(Gb, " \u0413\u0431 \u043F\u043E\u043C\u0435\u0441\u0442\u0438\u0442\u044C\u0441\u044F -  ").concat(fils, " \u0444\u0430\u0439\u043B\u043E\u0432 \u0441 \u0440\u0430\u0437\u043C\u0435\u0440\u043E\u043C \u043F\u043E ").concat(fileSize, " \u041C\u0431"));
+}); //8
 
-    case 'hw7':
-      {
-        //7
-        var fileSize = 820;
-        var Gb = Number(prompt("Введите количество ГБ в флешке: ", " "));
-        var fils = Math.floor(Gb * 1000 / fileSize);
-        alert(" \u0412 \u0444\u043B\u0435\u0448\u043A\u0435 \u043D\u0430 ".concat(Gb, " \u0413\u0431 \u043F\u043E\u043C\u0435\u0441\u0442\u0438\u0442\u044C\u0441\u044F -  ").concat(fils, " \u0444\u0430\u0439\u043B\u043E\u0432 \u0441 \u0440\u0430\u0437\u043C\u0435\u0440\u043E\u043C \u043F\u043E ").concat(fileSize, " \u041C\u0431"));
-        break;
-      }
+var hwOneTaskEight = document.getElementById("hw1.8");
+hwOneTaskEight.addEventListener("click", function () {
+  var money = Number(prompt("Введите количество денег: ", " "));
+  var priceOneChocolate = Number(prompt("Введите сколько стоит одна шоколадка: ", " "));
+  var numberOfChocolates = Math.floor(money / priceOneChocolate);
+  var balance = (money - priceOneChocolate * numberOfChocolates).toFixed(2);
+  console.log(" \n                    \u0412\u0441\u0435\u0433\u043E \u0434\u0435\u043D\u0435\u0433 = ".concat(money, " \u0433\u0440\u043D\n                    1 \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0430 = ").concat(priceOneChocolate, " \u0433\u0440\u043D\n                    \u041A\u043E\u043B-\u0432\u043E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043E\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u043E\u0436\u0435\u0442 \u043A\u0443\u043F\u0438\u0442\u044C = ").concat(numberOfChocolates, " \u0448\u0442\n                    \u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0441\u0447\u0435\u0442\u0443 = ").concat(balance, " \u0433\u0440\u043D"));
+  alert("\u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0441\u0447\u0435\u0442\u0443 = ".concat(balance, " \u0433\u0440\u043D"));
+}); //9
 
-    case 'hw8':
-      {
-        //8
-        var money = Number(prompt("Введите количество денег: ", " "));
-        var priceOneChocolate = Number(prompt("Введите сколько стоит одна шоколадка: ", " "));
-        var numberOfChocolates = Math.floor(money / priceOneChocolate);
-        var balance = (money - priceOneChocolate * numberOfChocolates).toFixed(2);
-        console.log(" \n                  \u0412\u0441\u0435\u0433\u043E \u0434\u0435\u043D\u0435\u0433 = ".concat(money, " \u0433\u0440\u043D\n                  1 \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0430 = ").concat(priceOneChocolate, " \u0433\u0440\u043D\n                  \u041A\u043E\u043B-\u0432\u043E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043E\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u043E\u0436\u0435\u0442 \u043A\u0443\u043F\u0438\u0442\u044C = ").concat(numberOfChocolates, " \u0448\u0442\n                  \u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0441\u0447\u0435\u0442\u0443 = ").concat(balance, " \u0433\u0440\u043D"));
-        alert("\u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0441\u0447\u0435\u0442\u0443 = ".concat(balance, " \u0433\u0440\u043D"));
-        break;
-      }
+var hwOneTaskNine = document.getElementById("hw1.9");
+hwOneTaskNine.addEventListener("click", function () {
+  var numberUser = Number(prompt("Введите трёхзначное число: ", " "));
+  var first = Math.floor(numberUser * 0.01);
+  var second = Math.floor(numberUser * 0.1) % 10;
+  var third = numberUser % 10;
+  var result = third * 100 + second * 10 + first;
+  alert(" ".concat(result));
+}); //10
 
-    case 'hw9':
-      {
-        //9
-        var numberUser = Number(prompt("Введите трёхзначное число: ", " "));
-        var first = Math.floor(numberUser * 0.01);
-        var second = Math.floor(numberUser * 0.1) % 10;
-        var third = numberUser % 10;
-        var result = third * 100 + second * 10 + first;
-        alert(" ".concat(result));
-        break;
-      }
+/* (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100. */
 
-    case 'hw10':
-      {
-        //10
-
-        /* (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100. */
-        var depositAmount = Number(prompt("Введите сумму вклада в банк: ", " "));
-        var percentDepositYear = 5;
-        var daysOfYear = 365;
-        var daysOfTwoMonth = 61;
-        var sumInteresPercent = (depositAmount * percentDepositYear * daysOfTwoMonth / daysOfYear / 100).toFixed(2);
-        console.log("\n      \u0421\u0443\u043C\u043C\u0443 \u0432\u043A\u043B\u0430\u0434\u0430 \u0432 \u0431\u0430\u043D\u043A = ".concat(depositAmount, "\n      \u041F\u0440\u043E\u0446\u0435\u043D\u0442\u043D\u0430\u044F \u0441\u0442\u0430\u0432\u043A\u0430 \u0434\u0435\u043F\u043E\u0437\u0438\u0442\u0430 ").concat(percentDepositYear, "% \u0433\u043E\u0434\u043E\u0432\u044B\u0445\n      \u041A\u043E\u043B-\u0432\u043E \u0434\u043D\u0435\u0439 \u0432 \u0433\u043E\u0434\u0443 = ").concat(daysOfYear, "\n      \u043A\u043E\u043B-\u0432\u043E \u0434\u043D\u0435\u0439 \u0432\u043A\u043B\u0430\u0434\u0430 = ").concat(daysOfTwoMonth, " \u0434\u043D\u0435\u0439 (2\u043C\u0435\u0441\u044F\u0446a)\n      \u0421\u0443\u043C\u043C\u0430 \u043D\u0430\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043E\u0432 = ").concat(sumInteresPercent, " \u0433\u0440\u043D "));
-        alert("\u0421\u0443\u043C\u043C\u0430 \u043D\u0430\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043E\u0432 = ".concat(sumInteresPercent, " \u0433\u0440\u043D"));
-        break;
-      }
-  }
+var hwOneTaskTen = document.getElementById("hw1.10");
+hwOneTaskTen.addEventListener("click", function () {
+  var depositAmount = Number(prompt("Введите сумму вклада в банк: ", " "));
+  var percentDepositYear = 5;
+  var daysOfYear = 365;
+  var daysOfTwoMonth = 61;
+  var sumInteresPercent = (depositAmount * percentDepositYear * daysOfTwoMonth / daysOfYear / 100).toFixed(2);
+  console.log("\n        \u0421\u0443\u043C\u043C\u0443 \u0432\u043A\u043B\u0430\u0434\u0430 \u0432 \u0431\u0430\u043D\u043A = ".concat(depositAmount, "\n        \u041F\u0440\u043E\u0446\u0435\u043D\u0442\u043D\u0430\u044F \u0441\u0442\u0430\u0432\u043A\u0430 \u0434\u0435\u043F\u043E\u0437\u0438\u0442\u0430 ").concat(percentDepositYear, "% \u0433\u043E\u0434\u043E\u0432\u044B\u0445\n        \u041A\u043E\u043B-\u0432\u043E \u0434\u043D\u0435\u0439 \u0432 \u0433\u043E\u0434\u0443 = ").concat(daysOfYear, "\n        \u043A\u043E\u043B-\u0432\u043E \u0434\u043D\u0435\u0439 \u0432\u043A\u043B\u0430\u0434\u0430 = ").concat(daysOfTwoMonth, " \u0434\u043D\u0435\u0439 (2\u043C\u0435\u0441\u044F\u0446a)\n        \u0421\u0443\u043C\u043C\u0430 \u043D\u0430\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043E\u0432 = ").concat(sumInteresPercent, " \u0433\u0440\u043D "));
+  alert("\u0421\u0443\u043C\u043C\u0430 \u043D\u0430\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043E\u0432 = ".concat(sumInteresPercent, " \u0433\u0440\u043D"));
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -260,7 +235,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58115" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50346" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
