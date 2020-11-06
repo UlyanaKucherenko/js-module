@@ -249,7 +249,7 @@ hwThreeTaskFive.addEventListener("click", function () {
 
 var hwThreeTaskSix = document.getElementById("hw3.6");
 hwThreeTaskSix.addEventListener("click", function () {
-  var continueCalc = Number(prompt('Запустить калькулятор? 1 - Да 0 - Нет', ''));
+  var continueCalc = Number(prompt('Запустить калькулятор?', ''));
 
   while (continueCalc) {
     var firstNumberUser = Number(prompt('Введите первое число:', '2'));
@@ -290,7 +290,7 @@ hwThreeTaskSix.addEventListener("click", function () {
     }
 
     alert("".concat(result));
-    continueCalc = Number(prompt('Продолжить? 1 - Да 0 - Нет', ''));
+    continueCalc = Number(prompt('Продолжить? ', ''));
   }
 
   ;
@@ -438,7 +438,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61568" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63484" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

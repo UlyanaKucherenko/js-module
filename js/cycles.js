@@ -152,7 +152,7 @@ hwThreeTaskFive.addEventListener("click", function() {
  const hwThreeTaskSix = document.getElementById("hw3.6");
  hwThreeTaskSix.addEventListener("click", function() {
 
-    let continueCalc = Number(prompt('Запустить калькулятор? 1 - Да 0 - Нет', ''));
+    let continueCalc = Number(prompt('Запустить калькулятор?', ''));
 
     while(continueCalc){
 
@@ -184,7 +184,7 @@ hwThreeTaskFive.addEventListener("click", function() {
     }
     alert(`${result}`);
 
-    continueCalc = Number(prompt('Продолжить? 1 - Да 0 - Нет', ''));
+    continueCalc = Number(prompt('Продолжить? ', ''));
 };
 
 });
@@ -306,3 +306,4 @@ hwThreeTaskNine.addEventListener("click", function() {
     }
     
 });
+  
