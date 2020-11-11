@@ -1,12 +1,12 @@
 'use strict';
 /*Функции*/
 
+export const hwFunction = () => {
 //1
 /*Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе;
  1 - если первое больше, чем второе; и 0 - если числа равны.*/
 
-const hwFourTaskOne = document.getElementById("hw4.1");
-hwFourTaskOne.addEventListener("click", function() {
+document.getElementById("hw4.1").addEventListener("click", function() {
 
     const firstNumber = Number(prompt('Введите первое число:', '2'));
     const secondNumber = Number(prompt(' Введите второе число:', '3'));
@@ -28,8 +28,7 @@ hwFourTaskOne.addEventListener("click", function() {
 //2
 /* Написать функцию, которая вычисляет факториал переданного ей числа. */
 
-const hwFourTaskTwo = document.getElementById("hw4.2");
-hwFourTaskTwo.addEventListener("click", function() {
+document.getElementById("hw4.2").addEventListener("click", function() {
 
     const userNumber = Number(prompt('Введите число:', '5'));
    
@@ -48,8 +47,7 @@ hwFourTaskTwo.addEventListener("click", function() {
 /* Написать функцию, которая принимает три отдельные цифры и превращает их в одно число.
  Например: цифры 1, 4, 9 превратятся в число 149.*/
 
- const hwFourTaskThree = document.getElementById("hw4.3");
- hwFourTaskThree.addEventListener("click", function() {
+ document.getElementById("hw4.3").addEventListener("click", function() {
 
     const firstNumber = Number(prompt('Введите первое число:', '2'));
     const secondNumber = Number(prompt(' Введите второе число:', '3'));
@@ -69,8 +67,7 @@ hwFourTaskTwo.addEventListener("click", function() {
 /* Написать функцию, которая принимает длину и ширину прямоугольника и вычисляет его площадь.
  Если в функции передали 1 параметр, то она вычисляет квадрата. */
 
- const hwFourTaskFour = document.getElementById("hw4.4");
- hwFourTaskFour.addEventListener("click", function() {
+document.getElementById("hw4.4").addEventListener("click", function() {
 
     const lengthRectangle = Number(prompt('Введите длину прямоугольника a =:', '5'));
     const widthRectangle = Number(prompt('Введите ширину прямоугольника b =:', '0'));
@@ -87,8 +84,7 @@ hwFourTaskTwo.addEventListener("click", function() {
 /* Написать функцию, которая проверяет, является ли переданное ей число совершенным.
  Совершенное число - это число, равное сумме всех своих собственных делителей. */
 
- const hwFourTaskFive = document.getElementById("hw4.5");
- hwFourTaskFive.addEventListener("click", function() {
+document.getElementById("hw4.5").addEventListener("click", function() {
 
     const userNumber = Number(prompt('Проверить является ли число совершенным. Введите число:', '6'));
 
@@ -114,8 +110,7 @@ hwFourTaskTwo.addEventListener("click", function() {
 /* Эта функция принимает минимальное и конечное значения для диапазона и выводит только те значения из диапазона, которые являются совершенными.
  Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет.  */
 
- const hwFourTaskSix = document.getElementById("hw4.6");
- hwFourTaskSix.addEventListener("click", function() {
+document.getElementById("hw4.6").addEventListener("click", function() {
 
     const minNumberRange = Number(prompt(' Введите минимальное число диапазона:', '1'));
     const maxNumberRange = Number(prompt(' Введите максимальное число диапазона:', '30'));
@@ -165,8 +160,7 @@ hwFourTaskTwo.addEventListener("click", function() {
  .Если при вызове функции минуты и / или секунды не были переданы, то выводить их как 00. */
 
 
- const hwFourTaskSeven = document.getElementById("hw4.7");
- hwFourTaskSeven.addEventListener("click", function() {
+ document.getElementById("hw4.7").addEventListener("click", function() {
 
     let hours = Number(prompt('Введите часы ЧЧ:', '4'));
     
@@ -200,8 +194,9 @@ hwFourTaskTwo.addEventListener("click", function() {
             }
         
         if(minutes.length === 1){
-            minutes = "0" + minutes ;
+            minutes = "0" + minutes;
         }
+        
         if(seconds.length === 1){
             seconds = "0" + seconds;
         }
@@ -214,8 +209,7 @@ hwFourTaskTwo.addEventListener("click", function() {
  //8
  /* Написать функцию, которая принимает часы, минуты и секунды и возвращает это время в секундах.*/
 
- const hwFourTaskEight = document.getElementById("hw4.8");
- hwFourTaskEight.addEventListener("click", function() {
+ document.getElementById("hw4.8").addEventListener("click", function() {
 
     let hours = Number(prompt('Введите часы ЧЧ:', '1'));
     
@@ -266,8 +260,7 @@ hwFourTaskTwo.addEventListener("click", function() {
  /* Написать функцию, которая принимает количество секунд, переводит их в часы, минуты и секунды
   и возвращает в виде строки «чч:мм:сс». */
 
- const hwFourTaskNine = document.getElementById("hw4.9");
-  hwFourTaskNine.addEventListener("click", function() {
+ document.getElementById("hw4.9").addEventListener("click", function() {
 
     const timeSeconds = Number(prompt('Введите времмя в секундах:', '120'));
     
@@ -302,8 +295,7 @@ hwFourTaskTwo.addEventListener("click", function() {
   При выполнении задания используйте функции из предыдущих 2-х заданий: сначала обе даты переведите в секунды,
    узнайте разницу в секундах, а потом разницу переведите обратно в «чч:мм:сс» */
 
-   const hwFourTaskTen = document.getElementById("hw4.10");
-   hwFourTaskTen.addEventListener("click", function() {
+document.getElementById("hw4.10").addEventListener("click", function() {
  
     let hoursFirstUser = Number(prompt('Введите 1-е время : Часы  :', '3'));
     let minutesFirstUser = Number(prompt('Введите 1-е время : Минуты  :', '20'));
@@ -384,3 +376,4 @@ hwFourTaskTwo.addEventListener("click", function() {
     `);
 });
 
+};

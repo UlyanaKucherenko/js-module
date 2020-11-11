@@ -1,6 +1,10 @@
 'use strict';
 /*Объекты*/
 
+
+export const hwObjects = () => {
+    
+
 //1
 /* Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), 
 и следующие функции для работы с этим объектом:
@@ -11,8 +15,7 @@
 Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.*/
 
 
-const hwFiveTaskOne = document.getElementById("hw5.1");
-hwFiveTaskOne.addEventListener("click", function() {
+document.getElementById("hw5.1").addEventListener("click", function() {
 
 const car = {
     munufacturer:"Japan",
@@ -66,8 +69,7 @@ const distance = Number(prompt("Введите расстояние: ","800"));
 
 Функция сокращения объекта-дроби. */
 
-const hwFiveTaskTwo = document.getElementById("hw5.2");
-hwFiveTaskTwo.addEventListener("click", function() {
+document.getElementById("hw5.2").addEventListener("click", function() {
 
     function Fraction(upNumber,downNumber){
         return {upNumber:upNumber, downNumber:downNumber};
@@ -125,6 +127,7 @@ hwFiveTaskTwo.addEventListener("click", function() {
                     resultUpNumber = upNumber / i;
                     resultDownNumber = downNumber / i;
                 }
+                
             }
 
             return `${-resultUpNumber}/${resultDownNumber}`;
@@ -173,8 +176,7 @@ hwFiveTaskTwo.addEventListener("click", function() {
  Например, если ко времени «20:30:45» добавить 30 секунд, то должно получиться «20:31:15», а не «20:30:75».
 */
 
-const hwFiveTaskThree = document.getElementById("hw5.3");
-hwFiveTaskThree.addEventListener("click", function() {
+document.getElementById("hw5.3").addEventListener("click", function() {
 
     function Time(hours, minutes, seconds){
         return {hours:hours, minutes:minutes, seconds:seconds};
@@ -263,3 +265,5 @@ hwFiveTaskThree.addEventListener("click", function() {
     alert(`результат в консоли!`);
 
 });
+
+};

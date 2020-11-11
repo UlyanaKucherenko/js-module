@@ -1,18 +1,17 @@
 'use strict';
 /*Осныва JS*/
 
+export const hwJsBasic = () => {
 //1
 
-const hwOneTaskOne = document.getElementById("hw1.1");
-hwOneTaskOne.addEventListener("click", function() {
+  document.getElementById("hw1.1").addEventListener("click", function() {
   const name = prompt('Введи своё имя :','');
   alert(`Привет, ${name} !`);
 });
 
 //2 
 
-  const hwOneTaskTwo = document.getElementById("hw1.2");
-  hwOneTaskTwo.addEventListener("click", function() {
+  document.getElementById("hw1.2").addEventListener("click", function() {
     const thisYear = 2020;
     const yearBorn = Number(prompt("Введи год cвоего рождения: "," "));
     const yearsOld = thisYear - yearBorn;
@@ -21,16 +20,14 @@ hwOneTaskOne.addEventListener("click", function() {
      
    //3
 
-  const hwOneTaskThree = document.getElementById("hw1.3");
-  hwOneTaskThree.addEventListener("click", function() {
+  document.getElementById("hw1.3").addEventListener("click", function() {
     const sideOfSquare = Number(prompt("Введите длину стороны квадрата(в см): а = ",""));
     const perimeterSquare = sideOfSquare * 4;
     alert(`Периметр квадрата равен ${perimeterSquare} см`);
   });
     
   //4
-  const hwOneTaskFour = document.getElementById("hw1.4");
-  hwOneTaskFour.addEventListener("click", function() {
+  document.getElementById("hw1.4").addEventListener("click", function() {
     const pi =3.14;
 
     const radius = Number(prompt("Введите радиус окружности : r = "," "));
@@ -40,8 +37,7 @@ hwOneTaskOne.addEventListener("click", function() {
   });
 
   //5
-  const hwOneTaskFive = document.getElementById("hw1.5");
-  hwOneTaskFive.addEventListener("click", function() {
+  document.getElementById("hw1.5").addEventListener("click", function() {
     const distance = Number(prompt("Введите расстояние между городами (в км) : L = ", " "));
     const time = Number(prompt("Введите время, за которое хотите добраться (в часах) : t = "," "));
 
@@ -52,8 +48,7 @@ hwOneTaskOne.addEventListener("click", function() {
 
   //6
 
-  const hwOneTaskSix = document.getElementById("hw1.6");
-  hwOneTaskSix.addEventListener("click", function() {
+  document.getElementById("hw1.6").addEventListener("click", function() {
     const rate= 0.85;
     const dollar = Number(prompt("Введите сумму в долларах : ", " "));
     const euro = (dollar * rate).toFixed(2);
@@ -63,8 +58,7 @@ hwOneTaskOne.addEventListener("click", function() {
 
       //7
 
-    const hwOneTaskSeven = document.getElementById("hw1.7");
-    hwOneTaskSeven.addEventListener("click", function() {
+    document.getElementById("hw1.7").addEventListener("click", function() {
       const fileSize = 820;
       const Gb = Number(prompt("Введите количество ГБ в флешке: ", " "));
       const fils = Math.floor((Gb * 1000) / fileSize);
@@ -75,8 +69,7 @@ hwOneTaskOne.addEventListener("click", function() {
    
       //8
 
-    const hwOneTaskEight = document.getElementById("hw1.8");
-    hwOneTaskEight.addEventListener("click", function() {
+    document.getElementById("hw1.8").addEventListener("click", function() {
       const money = Number(prompt("Введите количество денег: ", " "));
       const priceOneChocolate = Number(prompt("Введите сколько стоит одна шоколадка: ", " "));
         
@@ -96,8 +89,7 @@ hwOneTaskOne.addEventListener("click", function() {
 
       //9
 
-    const hwOneTaskNine = document.getElementById("hw1.9");
-    hwOneTaskNine.addEventListener("click", function() {
+    document.getElementById("hw1.9").addEventListener("click", function() {
       const numberUser = Number(prompt("Введите трёхзначное число: ", " "));
 
       const first = Math.floor(numberUser*0.01);
@@ -111,8 +103,7 @@ hwOneTaskOne.addEventListener("click", function() {
   
       //10
       /* (Сумма нач. * % ставка * к-во дней начисления % / к-во дней в году) / 100. */
-    const hwOneTaskTen = document.getElementById("hw1.10");
-    hwOneTaskTen.addEventListener("click", function() {
+    document.getElementById("hw1.10").addEventListener("click", function() {
       const depositAmount = Number(prompt("Введите сумму вклада в банк: ", " "));
       const percentDepositYear = 5;
       const daysOfYear = 365;
@@ -129,3 +120,5 @@ hwOneTaskOne.addEventListener("click", function() {
 
       alert(`Сумма начисленных процентов = ${sumInteresPercent} грн`);
     });
+
+  };

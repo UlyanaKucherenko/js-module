@@ -1,11 +1,11 @@
 'use strict';
 /*Циклы*/
 
+export const hwCycles = () => {
 //1
 /*Подсчитать сумму всех чисел в заданном пользователем диапазоне.*/
 
-const hwThreeTaskOne = document.getElementById("hw3.1");
-hwThreeTaskOne.addEventListener("click", function() {
+document.getElementById("hw3.1").addEventListener("click", function() {
     const firstNumberRange = Number(prompt('Введите диапозон чисел. Введите число ОТ:', '1'));
     const lastNumberRange = Number(prompt(' Введите число ДО:', '10'));
     let sumOfNumbers = 0;
@@ -20,8 +20,7 @@ hwThreeTaskOne.addEventListener("click", function() {
 //2
 /*Запросить 2 числа и найти только наибольший общий делитель.*/
 
-const hwThreeTaskTwo = document.getElementById("hw3.2");
-hwThreeTaskTwo.addEventListener("click", function() {
+document.getElementById("hw3.2").addEventListener("click", function() {
     const firstNumberUser = Number(prompt('Введите первое число:', '24'));
     const secondNumberUser = Number(prompt(' Введите второе число:', '12'));
     let firstListOfNumbers = [];
@@ -60,8 +59,7 @@ hwThreeTaskTwo.addEventListener("click", function() {
 //3
 //Запросить у пользователя число и вывести все делители этого числа.
 
-const hwThreeTaskThree = document.getElementById("hw3.3");
-hwThreeTaskThree.addEventListener("click", function() {
+document.getElementById("hw3.3").addEventListener("click", function() {
     const numberUser = Number(prompt('Введите число:', '48'));
     let arrDivisors = [];
     for(let i = 1; i<=numberUser;i++) {
@@ -76,8 +74,7 @@ hwThreeTaskThree.addEventListener("click", function() {
 //4
 /*Определить количество цифр в введенном числе.*/
 
-const hwThreeTaskFour = document.getElementById("hw3.4");
-hwThreeTaskFour.addEventListener("click", function() {
+document.getElementById("hw3.4").addEventListener("click", function() {
     const numberUser = Number(prompt('Введите число:', '123'));
     let sumOfDigits = numberUser.toString().length; 
 
@@ -89,8 +86,7 @@ hwThreeTaskFour.addEventListener("click", function() {
 При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. 
 Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.*/
 
-const hwThreeTaskFive = document.getElementById("hw3.5");
-hwThreeTaskFive.addEventListener("click", function() {
+document.getElementById("hw3.5").addEventListener("click", function() {
     const amountOfNumbers = Number(prompt('Сколько будете вводить чисел?:', '3'));
     let positiveListNumbers = 0 ;
     let negativeListNumbers = 0 ;
@@ -149,8 +145,7 @@ hwThreeTaskFive.addEventListener("click", function() {
 вывести результат и спросить, хочет ли он решить еще один пример.
  И так до тех пор, пока пользователь не откажется.*/
 
- const hwThreeTaskSix = document.getElementById("hw3.6");
- hwThreeTaskSix.addEventListener("click", function() {
+document.getElementById("hw3.6").addEventListener("click", function() {
 
     let continueCalc = Number(prompt('Запустить калькулятор?', ''));
 
@@ -193,8 +188,7 @@ hwThreeTaskFive.addEventListener("click", function() {
 /*Запросить у пользователя число и на сколько цифр его сдвинуть. 
 Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).*/
 
-const hwThreeTaskSeven = document.getElementById("hw3.7");
-hwThreeTaskSeven.addEventListener("click", function() {
+document.getElementById("hw3.7").addEventListener("click", function() {
 
    const userNumber = Number(prompt('Введите число:', '123456'));
    const digitShift = Number(prompt('На сколько цифр сдвинуть число?:', '2'));
@@ -214,8 +208,7 @@ hwThreeTaskSeven.addEventListener("click", function() {
 /* Зациклить вывод дней недели таким образом: «День недели.
  Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.*/ 
 
-const hwThreeTaskEight = document.getElementById("hw3.8");
-hwThreeTaskEight.addEventListener("click", function() {
+document.getElementById("hw3.8").addEventListener("click", function() {
     const daysOfWek = ['Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday','Sunday'];
     let i = 0;
     for(; ;) {
@@ -234,8 +227,7 @@ hwThreeTaskEight.addEventListener("click", function() {
 /* Вывести таблицу умножения для всех чисел от 2 до 9. 
 Каждое число необходимо умножить на числа от 1 до 10. */
 
-const hwThreeTaskNine = document.getElementById("hw3.9");
-hwThreeTaskNine.addEventListener("click", function() {
+document.getElementById("hw3.9").addEventListener("click", function() {
    for(let i = 2; i <= 9; i++){
     console.log(`Умножение на ${i} :`);
     for(let j = 1; j <= 10; j++){
@@ -253,8 +245,7 @@ hwThreeTaskNine.addEventListener("click", function() {
 В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100.
 И так до тех пор, пока пользователь не выберет == N. */
 
- const hwThreeTaskTen = document.getElementById("hw3.10");
- hwThreeTaskTen.addEventListener("click", function() {
+ document.getElementById("hw3.10").addEventListener("click", function() {
 
     let firtstNumberRange = 0;
     let lastNumberRange = 100;
@@ -307,3 +298,4 @@ hwThreeTaskNine.addEventListener("click", function() {
     
 });
   
+};

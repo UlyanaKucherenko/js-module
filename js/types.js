@@ -1,9 +1,9 @@
 'use strict';
 /*Типы данных и операторы*/
 
+export const hwTypes = () => {
     //1
-    const hwTwoTaskOne = document.getElementById("hw2.1");
-    hwTwoTaskOne.addEventListener("click", function() {
+    document.getElementById("hw2.1").addEventListener("click", function() {
         const age = Number(prompt("Введите сколько вам лет?"," "));
 
         if(age>0 && age<12) {
@@ -21,8 +21,7 @@
     });
 
     //2
-    const hwTwoTaskTwo = document.getElementById("hw2.2");
-    hwTwoTaskTwo.addEventListener("click", function() {
+    document.getElementById("hw2.2").addEventListener("click", function() {
         const numberUser = Number(prompt("Введите число от 0 до 9 :"," "));
 
         switch(numberUser){
@@ -86,8 +85,7 @@
     
     //3
 
-    const hwTwoTaskThree = document.getElementById("hw2.3");
-    hwTwoTaskThree.addEventListener("click", function() {
+    document.getElementById("hw2.3").addEventListener("click", function() {
         const numberUser = Number(prompt("Введите трёхзначное число :"," "));
 
         const first = Math.floor(numberUser*0.01);
@@ -109,8 +107,7 @@
 
     
     //4
-    const hwTwoTaskFour = document.getElementById("hw2.4");
-    hwTwoTaskFour.addEventListener("click", function() {
+    document.getElementById("hw2.4").addEventListener("click", function() {
         const yearOfBirth = Number(prompt("Введите год своего рождения: ", " "));
 
         if(yearOfBirth % 400 === 0) {
@@ -123,8 +120,7 @@
     });
 
     //5
-    const hwTwoTaskFive = document.getElementById("hw2.5");
-    hwTwoTaskFive.addEventListener("click", function() {
+    document.getElementById("hw2.5").addEventListener("click", function() {
         const fivedigitNumber = Number(prompt("Введите пятиразрядное число: ", " "));
 
         const firstDigit = Math.floor(fivedigitNumber*0.0001);
@@ -142,8 +138,7 @@
     });
 
     //6
-    const hwTwoTaskSix = document.getElementById("hw2.6");
-    hwTwoTaskSix.addEventListener("click", function() {
+    document.getElementById("hw2.6").addEventListener("click", function() {
         const USD = Number(prompt('Введите сумму в USD :', " "));
         const EUR = 0.85;
         const UAN = 28.36;
@@ -181,8 +176,7 @@
     });
 
     //7
-    const hwTwoTaskSeven = document.getElementById("hw2.7");
-    hwTwoTaskSeven.addEventListener("click", function() {
+    document.getElementById("hw2.7").addEventListener("click", function() {
         const parchaseAmount = Number(prompt('Введите сумму покупки :', " "));
         let amountToPay = 0;
 
@@ -202,8 +196,7 @@
     });
 
     //8
-    const hwTwoTaskEight = document.getElementById("hw2.8");
-    hwTwoTaskEight.addEventListener("click", function() {
+    document.getElementById("hw2.8").addEventListener("click", function() {
         const PI = 3.14;
         const circumference = Number(prompt('Введите длину окружности :', " "));
         const perimetrOfSquare = Number(prompt('Введите периметр квадрата :', " "));
@@ -221,8 +214,7 @@
     });
 
     //9
-    const hwTwoTaskNine = document.getElementById("hw2.9");
-    hwTwoTaskNine.addEventListener("click", function() {
+    document.getElementById("hw2.9").addEventListener("click", function() {
         const firstQuestion = Number(prompt('Ответь на 3 вопроса првильно! ВОПРОС №1 Пандемия в 2020ом называется: 1-эбола 2-covid-19 3-поросячая', " "));
         const secondQuestion = Number(prompt('ВОПРОС №2 Главный герой фильма "Матрица"?: 1-Нео 2-Стэтэм 3-чел в очках', " "));
         const thirdQuestion = Number(prompt('ВОПРОС №3 Кто предатель в игре "Among Us" ? : 1-Зелёный 2-Голубой 3-Красный', " "));
@@ -245,8 +237,7 @@
 
     
     //10
-    const hwTwoTaskTen = document.getElementById("hw2.10");
-    hwTwoTaskTen.addEventListener("click", function() {
+    document.getElementById("hw2.10").addEventListener("click", function() {
         const year = Number(prompt(' Введите год:', " "));
         if( (year % 400 === 0) || ( (year % 4 === 0) && (year % 100 !== 0) )) {
             console.log(`высокосный год`);
@@ -293,6 +284,7 @@
 
 });
               
+};
 
 
 
