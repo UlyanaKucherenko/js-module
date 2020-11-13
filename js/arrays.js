@@ -348,7 +348,7 @@ export const hwArrays = () => {
 
             const newArr = arr.filter((item) => {
                 if(item.faculty.toLowerCase() === group.faculty.toLowerCase() && item.seating >= group.quantity) {
-                    console.log(`нашло!`)
+                   // console.log(`нашло!`)
                     return true;
                 }
                 return false;
@@ -428,6 +428,3 @@ export const hwArrays = () => {
 
     });
 };
-
-
-

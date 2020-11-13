@@ -1657,7 +1657,7 @@ var hwArrays = function hwArrays() {
     var findAudienceForGroup = function findAudienceForGroup(arr, group) {
       var newArr = arr.filter(function (item) {
         if (item.faculty.toLowerCase() === group.faculty.toLowerCase() && item.seating >= group.quantity) {
-          console.log("\u043D\u0430\u0448\u043B\u043E!");
+          // console.log(`нашло!`)
           return true;
         }
 
@@ -1730,6 +1730,268 @@ var hwArrays = function hwArrays() {
 };
 
 exports.hwArrays = hwArrays;
+},{}],"js/classes.js":[function(require,module,exports) {
+"use strict";
+/*Классы*/
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.hwClasses = void 0;
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var hwClasses = function hwClasses() {
+  //1
+  document.getElementById("hw7.1").addEventListener("click", function () {
+    /* Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты:*/
+
+    /* поле, хранящее радиус окружности;*/
+
+    /* get-свойство, возвращающее радиус окружности;*/
+
+    /* set-свойство, устанавливающее радиус окружности;*/
+
+    /* get-свойство, возвращающее диаметр окружности;*/
+
+    /* метод, вычисляющий площадь окружности;*/
+
+    /* метод, вычисляющий длину окружности.*/
+
+    /*  Продемонстрировать работу свойств и методов.  */
+    var Circle = /*#__PURE__*/function () {
+      function Circle(radius) {
+        _classCallCheck(this, Circle);
+
+        this.radius = radius;
+      } //сво-ва
+
+
+      _createClass(Circle, [{
+        key: "calcArea",
+        //методы
+        value: function calcArea() {
+          return this.radius * this.radius * 3.14;
+        }
+      }, {
+        key: "calcLenght",
+        value: function calcLenght() {
+          return 2 * this.radius * 3.14;
+        }
+      }, {
+        key: "radiusCircle",
+        get: function get() {
+          return this.radius;
+        },
+        set: function set(newRadius) {
+          this.radius = newRadius;
+        }
+      }, {
+        key: "diameterCircle",
+        get: function get() {
+          return this.radius * 2;
+        }
+      }]);
+
+      return Circle;
+    }();
+
+    var a = new Circle(2);
+    console.log("\u041D\u0430\u0447\u0430\u043B\u044C\u043D\u044B\u0439 \u0440\u0430\u0434\u0438\u0443\u0441 \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438: ".concat(a.radiusCircle));
+    a.radiusCircle = 6;
+    console.log("\u0418\u0437\u043C\u0435\u043D\u0451\u043D\u043D\u044B\u0439 \u0440\u0430\u0434\u0438\u0443\u0441 \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438: ".concat(a.radiusCircle));
+    console.log("\u0414\u0438\u0430\u043C\u0435\u0442\u0440 \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438: ".concat(a.diameterCircle));
+    console.log("\u041F\u043B\u043E\u0449\u0430\u0434\u044C \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438: ".concat(a.calcArea()));
+    console.log("\u0414\u043B\u0438\u043D\u0430 \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0438: ".concat(a.calcLenght()));
+    alert("\u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 \u0432 \u043A\u043E\u043D\u0441\u043E\u043B\u0438!");
+  }); //2
+
+  document.getElementById("hw7.2").addEventListener("click", function () {
+    /*Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты:*/
+
+    /* поле, которое хранит цвет маркера; */
+
+    /* поле, которое хранит количество чернил в маркере (в процентах);*/
+
+    /* метод для печати (метод принимает строку и выводит текст соответствующим цветом;
+        текст выводится до тех пор, пока в маркере есть чернила;
+        один не пробельный символ – это 0,5% чернил в маркере).*/
+
+    /*Реализовать класс, описывающий заправляющийся маркер, 
+    унаследовав его от простого маркера и добавив метод для заправки маркера.*/
+
+    /* Продемонстрировать работу написанных методов. */
+    var Marker = /*#__PURE__*/function () {
+      function Marker(color, opacity) {
+        _classCallCheck(this, Marker);
+
+        this.color = color;
+        this.opacity = opacity;
+      } //method
+
+
+      _createClass(Marker, [{
+        key: "typeText",
+        value: function typeText(str) {
+          document.write("<div>");
+          var res = 0;
+
+          var _iterator = _createForOfIteratorHelper(str),
+              _step;
+
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var item = _step.value;
+
+              if (this.opacity > 0) {
+                document.write("<span style=\"color:".concat(this.color, "; opacity:").concat(this.opacity, "%\">").concat(item, "</span>"));
+
+                if (item !== " ") {
+                  this.opacity -= 0.5;
+                  res = this.opacity;
+                }
+              } else {
+                break;
+              }
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+
+          document.write("</div>");
+          return res;
+        }
+      }]);
+
+      return Marker;
+    }();
+
+    var FillMarker = /*#__PURE__*/function (_Marker) {
+      _inherits(FillMarker, _Marker);
+
+      var _super = _createSuper(FillMarker);
+
+      function FillMarker(color, opacity) {
+        _classCallCheck(this, FillMarker);
+
+        return _super.call(this, color, opacity);
+      } //method
+
+
+      _createClass(FillMarker, [{
+        key: "fillInMarker",
+        value: function fillInMarker() {
+          if (this.opacity === 0) {
+            this.opacity = 100;
+            document.write("\u0417\u0430\u043F\u0440\u0430\u0432\u0438\u043B\u0438 \u0447\u0435\u0440\u043D\u0438\u043B\u0430 \u0432 \u043C\u0430\u0440\u043A\u0435\u0440\u0435 \u043D\u0430 ".concat(this.opacity, "%"));
+          } else {
+            document.write("\u041E\u0441\u0442\u0430\u043B\u0438\u0441\u044C \u0447\u0435\u0440\u043D\u0438\u043B\u0430 \u0432 \u043C\u0430\u0440\u043A\u0435\u0440\u0435: ".concat(this.opacity, "%"));
+          }
+        }
+      }]);
+
+      return FillMarker;
+    }(Marker);
+
+    var textRed = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At enim consequuntur labore nobis hic recusandae blanditiis adipisci ea minima! Doloribus itaque ipsum ullam reprehenderit nulla? Magni esse sit vitae autem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. At enim consequuntur labore nobis hic recusandae blanditiis adipisci ea minima!";
+    var textBlue = "Hello, Ulya! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.";
+    var redMarker = new Marker("red", 100);
+    var amountOfInk = redMarker.typeText(textRed);
+    document.write("\u0427\u0435\u0440\u043D\u0438\u043B \u0432 \u043C\u0430\u0440\u043A\u0435\u0440\u0435 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C: ".concat(amountOfInk, "% \n"));
+    var blueMarker = new FillMarker("blue", amountOfInk);
+    blueMarker.fillInMarker();
+    blueMarker.typeText(textBlue);
+    blueMarker.fillInMarker();
+  }); //3
+
+  /* Реализовать класс Employee, описывающий работника, и создать массив работников банка.*/
+
+  /* Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка.
+  Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().*/
+
+  /* Создать объект класса EmpTable и вывести на экран результат работы метода getHtml(). */
+
+  document.getElementById("hw7.3").addEventListener("click", function () {
+    var Employee = function Employee(name, position, salary) {
+      _classCallCheck(this, Employee);
+
+      this.name = name;
+      this.position = position;
+      this.salary = salary;
+    };
+
+    var EmpTable = /*#__PURE__*/function () {
+      function EmpTable(arr) {
+        _classCallCheck(this, EmpTable);
+
+        this.arr = arr;
+      }
+
+      _createClass(EmpTable, [{
+        key: "getHtml",
+        value: function getHtml() {
+          var table = document.createElement('table');
+          var tbody = document.createElement('tbody');
+          table.style.cssText = 'width:500px; height:100px; border: 1px solid white; border-collapse: collapse; color:white;';
+          table.append(tbody);
+          document.querySelector('.container').prepend(table);
+          tbody.innerHTML = "\n                    <tr><th>\u2116</th><th>\u0418\u043C\u044F</th><th>\u0414\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u044C</th><th>\u0417\u0430\u0440\u043F\u043B\u0430\u0442\u0430</th></tr>\n                ";
+          this.arr.forEach(function (item, i) {
+            tbody.innerHTML += "\n                    <tr><td>".concat(i + 1, "</td><td>").concat(item.name, "</td><td>").concat(item.position, "</td><td>").concat(item.salary, "$</td></tr>\n                ");
+          });
+          var th = document.querySelectorAll('th');
+          th.forEach(function (item) {
+            item.style.cssText = 'border: 1px solid white;';
+          });
+          var td = document.querySelectorAll('td');
+          td.forEach(function (item) {
+            item.style.cssText = 'border: 1px solid white;';
+          });
+        }
+      }]);
+
+      return EmpTable;
+    }();
+
+    var employeeArr = [];
+    var a = new Employee('Ulya', 'Frontend', 500);
+    var b = new Employee('Bob', 'Backend', 600);
+    var c = new Employee('Ann', 'Design', 400);
+    employeeArr.push(a, b, c);
+    var table = new EmpTable(employeeArr);
+    table.getHtml();
+  });
+};
+
+exports.hwClasses = hwClasses;
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -1745,13 +2007,16 @@ var _objects = require("./js/objects");
 
 var _arrays = require("./js/arrays");
 
+var _classes = require("./js/classes");
+
 (0, _jsBasic.hwJsBasic)();
 (0, _types.hwTypes)();
 (0, _cycles.hwCycles)();
 (0, _functions.hwFunction)();
 (0, _objects.hwObjects)();
 (0, _arrays.hwArrays)();
-},{"./js/js-basic":"js/js-basic.js","./js/types":"js/types.js","./js/cycles":"js/cycles.js","./js/functions":"js/functions.js","./js/objects":"js/objects.js","./js/arrays":"js/arrays.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _classes.hwClasses)();
+},{"./js/js-basic":"js/js-basic.js","./js/types":"js/types.js","./js/cycles":"js/cycles.js","./js/functions":"js/functions.js","./js/objects":"js/objects.js","./js/arrays":"js/arrays.js","./js/classes":"js/classes.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1779,7 +2044,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55470" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60960" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
