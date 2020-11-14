@@ -1992,6 +1992,155 @@ var hwClasses = function hwClasses() {
 };
 
 exports.hwClasses = hwClasses;
+},{}],"js/dom.js":[function(require,module,exports) {
+"use strict";
+/*DOM*/
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.hwDOM = void 0;
+
+var hwDOM = function hwDOM() {
+  //1
+
+  /* Создать страницу, которая выводит нумерованный список песен: */
+  document.getElementById("hw8.1").addEventListener("click", function () {
+    var playList = [{
+      author: "LED ZEPPELIN",
+      song: "STAIRWAY TO HEAVEN"
+    }, {
+      author: "QUEEN",
+      song: "BOHEMIAN RHAPSODY"
+    }, {
+      author: "LYNYRD SKYNYRD",
+      song: "FREE BIRD"
+    }, {
+      author: "DEEP PURPLE",
+      song: "SMOKE ON THE WATER"
+    }, {
+      author: "JIMI HENDRIX",
+      song: "ALL ALONG THE WATCHTOWER"
+    }, {
+      author: "AC/DC",
+      song: "BACK IN BLACK"
+    }, {
+      author: "QUEEN",
+      song: "WE WILL ROCK YOU"
+    }, {
+      author: "METALLICA",
+      song: "ENTER SANDMAN"
+    }];
+    var ol = document.createElement('ol');
+    ol.style.cssText = 'color:white;';
+    document.querySelector('.container').prepend(ol);
+    playList.forEach(function (item) {
+      ol.innerHTML += "\n                    <li>".concat(item.author, " - \"").concat(item.song, "\"</li>\n                ");
+    });
+  }); //2
+
+  /* Создать HTML-страницу с кнопкой "Открыть" и модальным окном. 
+      На модальном окне должен быть текст и кнопка "Закрыть". 
+      Изначально модальное окно не отображается. При клике на кнопку "Открыть" появляется модальное окно, 
+      на кнопку "Закрыть" – исчезает.*/
+
+  document.getElementById("hw8.2").addEventListener("click", function () {
+    //create div
+    var div = document.createElement('div');
+    div.classList.add('modal');
+    document.querySelector('.container').prepend(div); // create content in div
+
+    var modal = document.querySelector('.modal');
+    modal.innerHTML = "\n                <button class=\"modal__btn-open\">\u041E\u0442\u043A\u0440\u044B\u0442\u044C</button>\n                <div class=\"modal__wrapper-window modal__wrapper-window--hidden \">\n                        <div class=\"modal__window\">\n                            <p class=\"modal__text\">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus minima tempora harum quisquam tenetur suscipit aliquid hic sit sunt corrupti ex explicabo aspernatur unde pariatur, omnis ducimus reiciendis itaque! Quaerat.</p>\n                            <button class=\"modal__btn-close\">\u0417\u0430\u043A\u0440\u044B\u0442\u044C</button>\n                        </div>\n                </div>\n            "; //click - remove btn-Open
+
+    var btnOpen = document.querySelector(".modal__btn-open");
+    var btnClose = document.querySelector(".modal__btn-close");
+    var modalWrappWindow = document.querySelector(".modal__wrapper-window");
+    btnOpen.addEventListener("click", function () {
+      btnOpen.classList.add('modal__btn-open--hidden');
+      modalWrappWindow.classList.remove('modal__wrapper-window--hidden');
+    }); //click - remove modal window
+
+    btnClose.addEventListener("click", function () {
+      modalWrappWindow.classList.add('modal__wrapper-window--hidden');
+      btnOpen.classList.remove('modal__btn-open--hidden');
+    });
+  }); //3
+
+  /*Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.*/
+
+  document.getElementById("hw8.3").addEventListener("click", function () {
+    var div = document.createElement('div');
+    div.classList.add('game');
+    document.querySelector('.container').prepend(div); // create content in div
+
+    var game = document.querySelector('.game');
+    game.innerHTML = "\n        <button class=\"game__btn\">\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C</button>\n        <div class=\"game__trafic-light\">\n            <div class=\"game__circle game__circle--red\"></div>\n            <div class=\"game__circle \"></div>\n            <div class=\"game__circle \"></div>\n        </div>\n     ";
+    var ciscels = document.querySelectorAll('.game__circle'); //проверка какой свет горит сейчас
+
+    var checkActiveColor = function checkActiveColor(activeRed, activeGreen) {
+      if (activeRed) {
+        return 1;
+      } else if (activeGreen) {
+        return 3;
+      }
+    }; //заставить мигать активный Красный свет
+
+
+    var chengeActiveRed = function chengeActiveRed() {
+      ciscels[0].classList.contains('game__circle--red') ? ciscels[0].classList.remove('game__circle--red') : ciscels[0].classList.add('game__circle--red');
+    }; //заставить мигать активный Зелёный свет
+
+
+    var chengeActiveGreen = function chengeActiveGreen() {
+      ciscels[2].classList.contains('game__circle--green') ? ciscels[2].classList.remove('game__circle--green') : ciscels[2].classList.add('game__circle--green');
+    }; //включить жёлтый
+
+
+    var chengeYellow = function chengeYellow() {
+      //ciscels[0].classList.remove('game__circle--red');
+      ciscels[1].classList.add('game__circle--yellow');
+    }; // отключить Жёлтый - включить Зелёный
+
+
+    var chengeGreen = function chengeGreen() {
+      ciscels[1].classList.remove('game__circle--yellow');
+      ciscels[2].classList.add('game__circle--green');
+    }; // отключить Жёлтый - включить Красный
+
+
+    var chengeRed = function chengeRed() {
+      ciscels[1].classList.remove('game__circle--yellow');
+      ciscels[0].classList.add('game__circle--red');
+    };
+
+    var chengeColor = function chengeColor(item) {
+      if (item === 1) {
+        setTimeout(chengeActiveRed, 1000);
+        setTimeout(chengeYellow, 2000);
+        setTimeout(chengeGreen, 4000);
+      }
+
+      if (item === 3) {
+        for (var i = 0; i < 7; i++) {
+          setTimeout(chengeActiveGreen, i * 500);
+        }
+
+        setTimeout(chengeYellow, 3000);
+        setTimeout(chengeRed, 5000);
+      }
+    };
+
+    game.querySelector('.game__btn').addEventListener("click", function () {
+      var activeRed = ciscels[0].classList.contains('game__circle--red');
+      var activeGreen = ciscels[2].classList.contains('game__circle--green');
+      var activeColor = checkActiveColor(activeRed, activeGreen);
+      chengeColor(activeColor);
+    });
+  });
+};
+
+exports.hwDOM = hwDOM;
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -2009,6 +2158,8 @@ var _arrays = require("./js/arrays");
 
 var _classes = require("./js/classes");
 
+var _dom = require("./js/dom");
+
 (0, _jsBasic.hwJsBasic)();
 (0, _types.hwTypes)();
 (0, _cycles.hwCycles)();
@@ -2016,7 +2167,8 @@ var _classes = require("./js/classes");
 (0, _objects.hwObjects)();
 (0, _arrays.hwArrays)();
 (0, _classes.hwClasses)();
-},{"./js/js-basic":"js/js-basic.js","./js/types":"js/types.js","./js/cycles":"js/cycles.js","./js/functions":"js/functions.js","./js/objects":"js/objects.js","./js/arrays":"js/arrays.js","./js/classes":"js/classes.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _dom.hwDOM)();
+},{"./js/js-basic":"js/js-basic.js","./js/types":"js/types.js","./js/cycles":"js/cycles.js","./js/functions":"js/functions.js","./js/objects":"js/objects.js","./js/arrays":"js/arrays.js","./js/classes":"js/classes.js","./js/dom":"js/dom.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2044,7 +2196,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60960" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49780" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -86,3 +86,130 @@ ul{
     }
 
 }
+
+/*     hw_DOM task 1    */
+
+.modal {
+    width: 100%;
+    min-height: 420px;
+    //z-index: 10;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__wrapper-window{
+
+    background-color: rgba(black, 0.3);
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        &--hidden {
+            display: none;
+        }
+    }
+
+
+    &__window {
+        background-color:white;
+        width: 400px;
+        height: 200px;
+        padding: 20px;
+        text-align: center;
+    }
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__btn-open,
+    &__btn-close {
+        min-height: 40px;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    &__btn-open{
+        &--hidden {
+            min-height: 0px;
+            width: 0px;
+            font-size: 0;
+            outline: none;
+            border: none;
+        }
+    }
+    
+}
+
+/* end*/
+
+
+
+/*     hw_DOM task 2    */
+
+.game {
+    width: 100%;
+    min-height: 300px;
+    //z-index: 10;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__btn {
+        min-height: 60px;
+        width: 200px;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    &__trafic-light{
+
+    background-color: rgba(grey, 0.8);
+    width: 400px;
+    height: 100px;
+    border-radius:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px;
+    }
+
+
+    &__circle{
+        background-color: rgba(black, 0.6);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+
+        &--red {
+            background-color:red;
+        }
+
+        &--yellow {
+            background-color:yellow;
+        }
+
+        &--green {
+            background-color:green;
+        }
+       
+    }
+    
+  
+
+    &__btn-open{
+        &--hidden {
+            min-height: 0px;
+            width: 0px;
+            font-size: 0;
+            outline: none;
+            border: none;
+        }
+    }
+    
+}
+
+/* end*/
